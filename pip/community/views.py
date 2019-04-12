@@ -30,6 +30,11 @@ def mealmenu(request):
 def about(request):
     return render(request, 'community/about.html', {})
 
+
+def home(request):
+    return render(request, 'home.html', {})
+
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
