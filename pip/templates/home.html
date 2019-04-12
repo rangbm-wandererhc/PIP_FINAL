@@ -1,0 +1,326 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PIP Learning</title>
+
+  <!-- Bootstrap core CSS -->
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+ <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+<!-- Start of  Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=638e7e83-aa82-4661-90c4-a5908a9305e9"> </script>
+<!-- End of  Zendesk Widget script -->
+</head>
+
+<body>
+    
+     
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+{% if user.is_authenticated %}
+	
+<div class="menubuttons">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PIP Education<br/><br/>
+          <small>Productivity Increasing Program</small>
+      </a>
+	<div class="float-right" style=" width:500px; margin-left: 200px;">
+          <div class="dropdown">
+              <button class="btn btn-outline-secondary btn-lg" style ="  margin-left: 15px;
+  margin-right: 30px; ">LAMP</button>
+              <div class="dropdown-content">
+              	<a href="/community/post_list">Community</a>
+              	<!-- <a href="#">Calendar</a> -->
+			    <a href="/community/bellschedule">Bell Schedule</a>
+			    <a href="/community/mealmenu">Meal Menu</a>
+			    <a href="https://www.lamppostnews.com/?fbclid=IwAR0_pDmZolOGC3f12trQMISoysNC-DPRkhUGWBNsRragq-yMR0tmH1_RxfA">LAMP POST</a>
+			    
+			   
+
+			</div>
+           </div> 
+             <div class="dropdown">
+              <button class="btn btn-outline-secondary btn-lg"  style ="  margin-left: 15px;
+  margin-right: 30px; ">LINK</button>
+              <div class="dropdown-content">
+        
+			    <a href="https://www.lamppostnews.com/?fbclid=IwAR0_pDmZolOGC3f12trQMISoysNC-DPRkhUGWBNsRragq-yMR0tmH1_RxfA">LAMP POST</a>
+			    <a href="https://inow.mps.k12.al.us/InformationNow/Login.aspx?redirecturl=/InformationNow">INOW </a>
+			    <a href="http://www.loveless.mps-al.org/about_us/school_staff">Contact Teacher</a>
+			    <a href="https://wordplay.com/login">Wordplay</a>
+			    <a href="http://membean.com/">Membean</a>
+			   
+
+			</div>
+           </div> 
+		  <div class="dropdown"> 
+    			<button class="btn btn-outline-secondary btn-lg"  style ="  margin-left: 15px;
+  margin-right: 30px; ">GRADE</button>
+    			<div class="dropdown-content">
+			    <a href="/community/post_list">9th grade</a>
+			    <a href="/community/post_list"> 10th grade</a>
+			    <a href="/community/post_list">11th grade</a>
+			    <a href="/community/post_list">12th grade</a>
+
+			</div>
+		  </div> 
+ 	      
+		<div class="dropdown">
+			<div class="btn btn-outline-secondary btn-lg" >
+				<a href="{% url 'logout' %}"  style ="  margin-left: 30px;
+  margin-right: 30px; padding-left: 2px; ">LOGOUT</a>
+			</div>
+		</div>
+    </div>
+</div>  
+
+
+<div id="mySidenav" class="sidenav" >
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+  <a href="#">Personal Invetion Project Page</a>
+</div>
+
+<div class="menu" style="width: 100px;">
+   <div class="float-left" style="width: 100px;">
+<span style="width: 100px;" onclick="openNav()">&#9776;</span>
+</div>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+ </nav>
+
+
+    
+    
+  <!-- Page Content -->
+  <div class="container">
+
+      
+      
+      
+      
+    <!-- Jumbotron Header -->
+<header class="float-right">    
+      <header class="news">
+        <header class="card h-100">
+          <header class="card-body">
+            <h4 class="card-title">News</h4>
+             <a href = "https://bloximages.newyork1.vip.townnews.com/montgomeryindependent.com/content/tncms/assets/v3/editorial/b/63/b6359d88-361d-11e9-af62-4b8f4b7ac294/5c6f150ac2589.image.jpg?resize=1200%2C900" alt=" LAMP Team C Robotics Team" width="324.4" height="243.2"><img class="card-img-mid" img src="https://bloximages.newyork1.vip.townnews.com/montgomeryindependent.com/content/tncms/assets/v3/editorial/b/63/b6359d88-361d-11e9-af62-4b8f4b7ac294/5c6f150ac2589.image.jpg?resize=1200%2C900" alt=" LAMP Team C Robotics Team" width="324.4" height="243.2"></a>
+              <p class="card-text"><br/><b>LAMP Golden Tigers (L-R) Harang Kim, Yohan Foo, Junhyung Park, and Moussa Ndoye. The team placed in the top 10 in the Skills competition on Saturday. Thier sister team from LAMP, Loose Screws, won the Excellence Award (High School).</b><br/>,</p>
+            </header>
+          <header class="card-footer">
+            <a href="https://www.montgomeryindependent.com/news/robotics-programs-are-incubators-for-tomorrow-s-skilled-labor-force/article_2bbf191e-361c-11e9-a9d0-c3f0f5307345.html">Read More!</a>
+          </header>
+       </header>
+
+
+ </header>
+</header>
+	      
+	<div class="maincard" style=" margin-bottom: 0px;">
+	<header class="container">
+	  <header class="jumbotron my-4"><br/>
+	      <h1 class="display-4"><b>Welcome {{ user.username }}!</b></h1>
+	      <p class="lead">The website designed to accomodate all student needs; we help you manage class schedules, due dates, study times, essay writing, and  easy contact with your teachers.</p>
+	    </header>
+	</header>
+	   </div>
+	      
+	   <div class="maincard" style="margin: 0px;">
+	<header class="container">
+	  <header class="jumbotron my-4"><br/>
+	     
+	      <p class="lead">"Those who are quiet are those who are happy" - Yohan Foo</p>
+	    </header>
+	</header>
+	   </div>
+	<div id="features">      
+	<!-- Page Features -->      
+	    
+
+	      <div class="col-lg-6 col-md-6 mb-4">
+	        <div class="card h-100">
+	          <img class="card-img-top" src="http://p12cdn4static.sharpschool.com/UserFiles/Servers/Server_396882/Image/logo/lamp.png" alt="">
+	          <div class="card-body">
+	            <h4 class="card-title">Contact Teachers</h4>
+	            <p class="card-text">Email your teachers about homework problems, upcoming assignments, or other questions that you have</p>
+	          </div>
+	          <div class="card-footer">
+	            <a href="http://www.loveless.mps-al.org/about_us/school_staff" class="btn btn-primary">Take me to the link</a>
+	          </div>
+	        </div>
+	      </div>
+
+	      <div class="col-lg-6 col-md-6 mb-4">
+	        <div class="card h-100">
+	          <img class="card-img-top" src="http://p12cdn4static.sharpschool.com/UserFiles/Servers/Server_396882/Image/logo/lamp.png" alt="">
+	          <div class="card-body">
+	            <h4 class="card-title">INOW</h4>
+	            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
+	          </div>
+	          <div class="card-footer">
+	            <a href="https://inow.mps.k12.al.us/InformationNow/Login.aspx?redirecturl=/InformationNow" class="btn btn-primary">Take me to the link</a>
+	          </div>
+	        </div>
+	      </div>
+
+	       <div class="col-lg-6 col-md-6 mb-4">
+	        <div class="card h-100">
+	          <img class="card-img-top" src="http://p12cdn4static.sharpschool.com/UserFiles/Servers/Server_396882/Image/logo/lamp.png" alt="">
+	          <div class="card-body">
+	            <h4 class="card-title">Bell Schedule</h4>
+	            <p class="card-text">Email your teachers about homework problems, upcoming assignments, or other questions that you have</p>
+	          </div>
+	          <div class="card-footer">
+	            <a href="/community/bellschedule" class="btn btn-primary">Take me to the link</a>
+	          </div>
+	        </div>
+	      </div>
+
+	       <div class="col-lg-6 col-md-6 mb-4">
+	        <div class="card h-100">
+	          <img class="card-img-top" src="http://p12cdn4static.sharpschool.com/UserFiles/Servers/Server_396882/Image/logo/lamp.png" alt="">
+	          <div class="card-body">
+	            <h4 class="card-title">Meal Meanu</h4>
+	            <p class="card-text">Email your teachers about homework problems, upcoming assignments, or other questions that you have</p>
+	          </div>
+	          <div class="card-footer">
+	            <a href="/community/mealmenu" class="btn btn-primary">Take me to the link</a>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	    <!-- /.row -->
+
+	</div>
+
+
+<script>
+(function(t,a,l,k,j,s){
+s=a.createElement('script');s.async=1;s.src="https://cdn.talkjs.com/talk.js";a.head.appendChild(s)
+;k=t.Promise;t.Talk={v:1,ready:{then:function(f){if(k)return new k(function(r,e){l.push([f,r,e])});l
+.push([f])},catch:function(){return k&&new k()},c:l}};})(window,document,[]);
+</script>
+
+<div id="footer-align">
+	  <!-- /.container -->
+	 <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://pip-education.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	  <!-- Footer -->
+	  <footer class="py-5 bg-dark">
+	    <div class="container">
+	      <p class="m-0 text-center text-white">Copyright &copy; Personal Invention Project Co. 2019</p>
+	    </div>
+
+
+
+
+
+	    <!-- /.container -->
+
+{% else %}
+
+<div class="menubuttons" style="margin: 50px;">
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">PIP Education<br/><br/>
+          <small>Productivity Increasing Program</small>
+      </a>
+
+    </div>
+</div>  
+
+     
+<p style="font-size: 40px; text-align: center; margin: 150px;">You are not logged in</p>
+
+<a href="{% url 'login' %}" style="font-size: 40px; text-align: center; margin-left: 850px;">Click to login</a>
+
+</footer>
+
+  <!-- Footer -->
+  <div class=footer>
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Personal Invetion Project Co. 2019</p>
+    </div>
+
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+
+  
+</div>
+
+
+
+
+
+
+
+    <!-- /.container -->
+ </footer> <!-- Bootstrap core JavaScript -->
+
+  
+ 
+{% endif %}
+
+</body>
+
+</html>

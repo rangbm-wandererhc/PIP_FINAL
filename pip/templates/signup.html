@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>PIP Learning</title>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+  <!-- Custom styles for this template -->
+
+  <link rel="stylesheet" href="{% static 'css/Signup_Example.css' %}">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+ <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+</head>
+
+<body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<div class="menubuttons">
+	  <!-- Navigation -->
+	  <nav class="navbar">
+	  	<a class="navbar-brand" href="/home">
+	    <div class="container style=">
+	      	   PIP Education<br/><br/>
+	          <small>Productivity Increasing Program</small>
+	    </div></a>
+	<div class="float-right">
+	          
+			  	
+	</div>
+</div>  
+
+ <div id="id01">
+  <form method="post">
+  	<div class="container">
+  		{% csrf_token %}
+  	    {{ form.as_p }}
+  	     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p><br/>
+  	    <div class="clearfix">
+  	    	<button type="signup">Sign Up</button>
+  	    	<a href ="/accounts/login"><button type="button" class="cancelbtn">Cancel</button></a>
+    
+         
+  	    </div>
+  	</div>
+   
+  </form>
+  </div>
+  <!-- Footer -->
+  <div class=footer>
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Park Kim Foo Co. 2019</p>
+    </div>
+
+    <!-- /.container -->
+  </footer>
+
+  
+</div>
+</body>
+
+</html>
+
+
