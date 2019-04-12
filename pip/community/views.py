@@ -27,7 +27,7 @@ def bellschedule(request):
 def mealmenu(request):
     return render(request, 'community/mealmenu.html', {})
 
-def mealmenu(request):
+def about(request):
     return render(request, 'community/about.html', {})
 
 def post_new(request):
