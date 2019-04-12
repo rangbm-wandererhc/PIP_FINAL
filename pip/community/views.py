@@ -27,6 +27,9 @@ def bellschedule(request):
 def mealmenu(request):
     return render(request, 'community/mealmenu.html', {})
 
+def mealmenu(request):
+    return render(request, 'community/about.html', {})
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
