@@ -31,8 +31,7 @@ def about(request):
     return render(request, 'community/about.html', {})
 
 
-def home(request):
-    return render(request, 'home.html', {})
+
 
 
 def post_new(request):
